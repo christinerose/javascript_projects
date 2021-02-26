@@ -10,7 +10,7 @@ function Rock_Paper_Scissors() {
     console.log("Let's play Rock, Paper, Scissors!");
 
     i = Math.floor(Math.random() * 4);
-    play = 1
+    play = i;
 
     console.log(play);
 
@@ -22,9 +22,7 @@ function Rock_Paper_Scissors() {
     console.log("**********");
     console.log(" ");
 
-    let guess = prompt(parseInt("Choose a number above to throw\
-                                     Rock, Paper, or Scissors. See if you\
-                                      can beat me! One, two, three—GO! "));
+    let guess = prompt("Choose a number above to throw Rock, Paper, or Scissors. See if you can beat me! One, two, three—GO! ");
 
     if (guess === play) {
         let p = play;
@@ -64,28 +62,29 @@ function Rock_Paper_Scissors() {
             console.log("I threw PAPER. Scissors cuts Paper. You win! ");
         }
     } else {
-        console.log("Ooops! Something whent wrong! ");
+        console.log("Ooops! Something went wrong! ");
+    }
+
+    console.log(" ");
+    console.log("**********");
+    console.log(" ");
+
+
+
+
+
+    let answer = prompt("What to play again? Y or N? ");
+
+    if (answer === "Y" || answer === "y") {
+        console.log(" ");
+        console.log("Great! Here we go!");
+        console.log(" ");
+        Rock_Paper_Scissors();
+    } else {
+        console.log(" ");
+        console.log("Thank you for playing! See you next time!");
+        console.log(" ");
     }
 }
 
-
-console.log(" ");
-console.log("**********");
-console.log(" ");
-
-
-let answer = prompt("What to play again? Y or N? ");
-
-if (answer === "Y" || answer === "y") {
-    console.log(" ");
-    console.log("Great! Here we go!");
-    console.log(" ");
-    Rock_Paper_Scissors();
-} else {
-    console.log(" ");
-    console.log("Thank you for playing! See you next time!");
-    console.log(" ");
-}
-
-
-Rock_Paper_Scissors(); 
+Rock_Paper_Scissors();
